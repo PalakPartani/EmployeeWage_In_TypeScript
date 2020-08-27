@@ -7,8 +7,9 @@ let day = 1;
 let hours = 0;
 let hr = 0;
 //cal daily wage.
-let calculateDailyWage = (employeeHrs: number) => {
+let calculateDailyWage = (employeeHrs: number,days:number) => {
     var wage = employeeHrs * WAGE_PER_HOUR;
+    console.log('Day : ' + days);
     console.log("Daily Wage : " + wage)
 }
     //Function to get working hours.
@@ -40,7 +41,7 @@ while (day < 20 && hr < 100) {
         getWorkHours(empCheck);
         hr += hours;
     var empDailyWage: Array<number> = [hr];
-    calculateDailyWage(hours);
+    calculateDailyWage(hours, day);
    
 }
 //Displaying the total salary for month.
